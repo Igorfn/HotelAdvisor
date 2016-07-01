@@ -1,0 +1,9 @@
+= simple_form_for @hotel, :html => {:multipart => true} do |f|
+  = f.input :title, label: 'Hotel Title'
+  = f.input :image, as: :file, label: 'Hotel Image'
+  = f.input :price_of_room, label: 'Room Price'
+  = f.input :address, label: 'Hotel Address'
+  = f.input :breakfast, as: :boolean, label: 'Include breakfast'
+  = f.input :room_description, label: 'Hotel Description'
+  = f.input :rating, label: 'Hotel Rating'
+  = f.button :submit
