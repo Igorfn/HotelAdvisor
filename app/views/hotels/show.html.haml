@@ -4,7 +4,6 @@
 = image_tag @hotel.image_url.to_s, width: '350'
 
 
-%h3 Hotel rating:  #{@hotel.rating}
 
 - if @hotel.breakfast
   %h3 Room breakfast include: yes
@@ -14,8 +13,6 @@
 %h3 Room description:  #{@hotel.room_description}
 %h3 Price of room: #{@hotel.price_of_room.to_s} $
 %h3 Address of hotel:  #{@hotel.address}
-
+= render @hotel.reviews
+%p= link_to 'Add review', new_hotel_review_path(@hotel)
 %p= link_to 'Back', root_path
-%p= link_to 'Edit', edit_hotel_path(@hotel)
-%p= link_to 'Delete', hotel_path,  method: :delete, data: {confirm: 'Are you sure?'}
-

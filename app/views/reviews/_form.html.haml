@@ -1,0 +1,13 @@
+.container
+  = simple_form_for ([@hotel, @hotel.reviews.build]) do |f|
+    #rating-form
+      %label Rating
+    = f.input :comment
+    = f.button :submit
+
+:javascript
+   $('#rating-form').raty({
+    path: '/assets/',
+    scoreName: 'review[rating]'
+   });
+

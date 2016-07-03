@@ -6,7 +6,6 @@ class CreateHotels < ActiveRecord::Migration
       t.boolean :breakfast
       t.text :address
       t.text :room_description
-      t.integer :rating
 
       t.timestamps null: false
     end
