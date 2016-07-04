@@ -1,0 +1,80 @@
+.hotelstop
+  #carousel.carousel.slide
+    / Индикаторы
+    %ol.carousel-indicators
+      %li.active{"data-slide" => "0", "data-target" => "#carousel"}
+      %li{"data-slide" => "1", "data-target" => "#carousel"}
+      %li{"data-slide" => "2", "data-target" => "#carousel"}
+      %li{"data-slide" => "3", "data-target" => "#carousel"}
+      %li{"data-slide" => "4", "data-target" => "#carousel"}
+    / Слайды
+    .carousel-inner
+      .item.active
+        %img{:align => "middle", :alt => "", :src => 'app/assets/images/Hotel1.jpg'}
+          .carousel-caption
+            %h3 Первый
+            %p Описание
+      .item
+        %img{:align => "middle", :alt => "", :src => "img/Hotel3.jpg"}
+          .carousel-caption
+            %h3 Второй
+            %p Описание
+      .item
+        %img{:align => "middle", :alt => "", :src => "img/Hotel3.jpg"}
+          .carousel-caption
+            %h3 Третий
+            %p Описание
+      .item
+        %img{:align => "middle", :alt => "", :src => "img/Hotel4.jpg"}
+          .carousel-caption
+            %h3 Четвертый
+            %p Описание
+      .item
+        %img{:align => "middle", :alt => "", :src => "img/Hotel5.jpg"}
+          .carousel-caption
+            %h3 Пятый
+            %p Описание
+    / Стрелки
+    %a.left.carousel-control{"data-slide" => "prev", :href => "#carousel"}
+      %span.glyphicon.glyphicon-chevron-left
+    %a.right.carousel-control{"data-slide" => "next", :href => "#carousel"}
+      %span.glyphicon.glyphicon-chevron-right
+  .hotelslist
+    %h1{:align => 'center'} Hotels
+    .container
+      .row
+        - if Hotel.count == 0
+          %h1 There is no hotels
+        - else
+          - @hotels.each do |hotel|
+            .col-md-4
+              .hotellistitem
+                .thumbnail
+                  %img{:alt => "", :src => hotel.image_url.to_s, :style => 'height: 300px'}
+                %h2 #{hotel.title}
+                %p.text-justify #{hotel.room_description}
+                %a.btn{:href => hotel_path(hotel)} Подробнее
+%center
+  = paginate @hotels
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

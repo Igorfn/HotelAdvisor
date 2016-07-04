@@ -1,0 +1,6 @@
+%h1 Profile
+= image_tag current_user.image_url.to_s, width: '250'
+%h1 #{@user.username}
+%h1 #{@user.email}
+
+= link_to 'Edit', edit_user_registration_path(@user)
