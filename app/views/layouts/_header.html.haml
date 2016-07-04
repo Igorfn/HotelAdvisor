@@ -1,34 +1,25 @@
 %body
-  .navbar.navbar-default.navbar-fixed-top
-    .menu
-      .navbar-header
-        %button.navbar-toggle{"data-target" => "#navbar-menu", "data-toggle" => "collapse", :type => "button"}
-          %span.sr-only{"data-toggle" => "dropdown"} Open Navigation
-          %span.icon-bar
-          %span.icon-bar
-          %span.icon-bar
-        = link_to 'Hotel Advisor', root_path, class: 'navbar-brand'
-      #navbar-menu.collapse.navbar-collapse.pull-right
-        %ul.nav.navbar-nav
-          %li.active
-            = link_to 'Home', root_path
-          %li
-            = link_to 'Help'
-          %li
-            = link_to 'Contact Us'
-          %li
-            = link_to 'About Us'
-          - if user_signed_in?
-            %li
-              = link_to 'Profile', current_user
-            %li
-              = link_to 'Add Hotel', new_hotel_path
-          - else
-            %li
-              = link_to 'Sing Up', new_user_registration_path
-          - if user_signed_in?
-            %li
-              = link_to 'Sing Out', destroy_user_session_path, method: :delete
-          - else
-            %li
-              = link_to 'Log In', new_user_session_path
+  .navigation
+    %ul.main-navigation
+      - if user_signed_in?
+        %li
+          = link_to 'Sing Out', destroy_user_session_path, method: :delete
+      - else
+        %li
+          = link_to 'Log In', new_user_session_path
+      - if user_signed_in?
+        %li
+          = link_to 'Profile', current_user
+        %li
+          = link_to 'Add Hotel', new_hotel_path
+      - else
+        %li
+          = link_to 'Sing Up', new_user_registration_path
+      %li
+        = link_to 'About Us'
+      %li
+        = link_to 'Contact Us'
+      %li
+        = link_to 'Help'
+      %li
+        = link_to 'Home', root_path
