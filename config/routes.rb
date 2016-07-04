@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
   devise_for :users
+  resources :users
+  get 'users/:id' => 'users#destroy', :as => :admin_destroy_user
   resources :hotels do
     resources :reviews
   end
