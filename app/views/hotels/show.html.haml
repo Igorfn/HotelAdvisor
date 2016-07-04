@@ -22,9 +22,9 @@
       = render @hotel.reviews
       - if user_signed_in?
         - if @hotel.user_id == current_user.id
-          = link_to "Edit", edit_hotel_path(@hotel)
-          = link_to "Delete", hotel_path(@hotel), method: :delete, data: { confirm: "Are you sure?" }
           %p= link_to 'Add review', new_hotel_review_path(@hotel)
+          = link_to "Edit Hotel", edit_hotel_path(@hotel)
+          = link_to "Delete Hotel", hotel_path(@hotel), method: :delete, data: { confirm: "Are you sure?" }
 %p= link_to 'Back', root_path
 :javascript
   $('.review-rating').raty({

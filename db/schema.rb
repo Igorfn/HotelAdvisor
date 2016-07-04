@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 20160704151442) do
     t.string   "state"
     t.string   "city"
     t.string   "street"
+    t.integer  "rating"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
     t.string   "image"

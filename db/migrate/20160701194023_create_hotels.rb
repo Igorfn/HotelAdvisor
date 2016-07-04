@@ -9,6 +9,7 @@ class CreateHotels < ActiveRecord::Migration
       t.string  :state
       t.string  :city
       t.string  :street
+      t.integer :rating
       t.timestamps null: false
     end
   end
