@@ -15,11 +15,13 @@ class HotelsController < ApplicationController
       @average_review = 0
     else
       @average_review = @hotel.reviews.average(:rating).round(2)
+      @hotel.rating = @average_review
+      @hotel.save
     end
   end
 
   def create
-    @hotel = Hotel.new(hotel_params)
+    @hotel = current_user.hotels.build(hotel_params)
 
     if @hotel.save
       redirect_to root_path
