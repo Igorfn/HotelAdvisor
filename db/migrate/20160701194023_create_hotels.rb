@@ -6,7 +6,10 @@ class CreateHotels < ActiveRecord::Migration
       t.boolean :breakfast
       t.text :address
       t.text :room_description
-
+      t.string  :count_name
+      t.string  :state
+      t.string  :city
+      t.string  :street
       t.timestamps null: false
     end
   end
