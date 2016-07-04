@@ -1,0 +1,44 @@
+.container
+  .row
+    .thumbnail
+      .hotel-title
+        %h1 #{@hotel.title}
+        .row
+          .average-review-rating{'data-score' => @average_review}
+        %p
+          %b #{@hotel.count_name}, #{@hotel.state}, #{@hotel.city}, #{@hotel.street}
+  .row
+    .hotview
+      .row
+        .thumbnail
+          = image_tag @hotel.image_url.to_s, width: '250'
+        .marg.thumbnail
+          .descript
+            %h3 Описание:
+            %p #{@hotel.room_description}
+
+    .row.thumbnail
+      %p Отзывы:
+      = render @hotel.reviews
+      - if user_signed_in?
+        - if @hotel.user_id == current_user.id
+          = link_to "Edit", edit_hotel_path(@hotel)
+          = link_to "Delete", hotel_path(@hotel), method: :delete, data: { confirm: "Are you sure?" }
+          %p= link_to 'Add review', new_hotel_review_path(@hotel)
+%p= link_to 'Back', root_path
+:javascript
+  $('.review-rating').raty({
+    readOnly: true,
+    score: function() {
+      return $(this).attr('data-score');
+    },
+    path: '/assets/'
+  });
+:javascript
+  $('.average-review-rating').raty({
+  	readOnly: true,
+  	path: '/assets/',
+  	score: function() {
+  		return $(this).attr('data-score')
+  	}
+  });
