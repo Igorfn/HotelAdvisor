@@ -12,6 +12,8 @@
 
 %h3 Room description:  #{@hotel.room_description}
 %h3 Price of room: #{@hotel.price_of_room.to_s} $
+%h3.avg-rating Average Rating:
+.average-review-rating{'data-score' => @average_review}
 = render @hotel.reviews
 %p= link_to 'Add review', new_hotel_review_path(@hotel)
 %p= link_to 'Back', root_path
@@ -25,4 +27,12 @@
       return $(this).attr('data-score');
     },
     path: '/assets/'
+  });
+:javascript
+  $('.average-review-rating').raty({
+  	readOnly: true,
+  	path: '/assets/',
+  	score: function() {
+  		return $(this).attr('data-score')
+  	}
   });

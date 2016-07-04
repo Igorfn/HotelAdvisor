@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7bc420ce-6a17-4f6b-8e5b-d7b8779bfe77" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/hotel.rb" afterPath="$PROJECT_DIR$/app/models/hotel.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/hotels_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/hotels_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/hotels/show.html.haml" afterPath="$PROJECT_DIR$/app/views/hotels/show.html.haml" />
     </list>
     <ignored path="HotelAdvisor.iws" />
@@ -18,7 +17,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/HotelAdvisor@Development__HotelAdvisor.coverage" NAME="Development: HotelAdvisor Coverage Results" MODIFIED="1467614280444" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="HotelAdvisor" />
+    <SUITE FILE_PATH="coverage/HotelAdvisor@Development__HotelAdvisor.coverage" NAME="Development: HotelAdvisor Coverage Results" MODIFIED="1467614494726" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="HotelAdvisor" />
     <SUITE FILE_PATH="coverage/HotelAdvisor@db_drop__HotelAdvisor.coverage" NAME="db:drop: HotelAdvisor Coverage Results" MODIFIED="1467614269759" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="HotelAdvisor" />
     <SUITE FILE_PATH="coverage/HotelAdvisor@db_migrate__HotelAdvisor.coverage" NAME="db:migrate: HotelAdvisor Coverage Results" MODIFIED="1467614273606" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="HotelAdvisor" />
   </component>
@@ -34,12 +33,24 @@
       <file leaf-file-name="show.html.haml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/hotels/show.html.haml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+            <state relative-caret-position="180">
+              <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
               <folding>
-                <marker date="1467614386000" expanded="true" signature="519:637" ph="{&quot;readOnly&quot;: true...}" />
-                <marker date="1467614386000" expanded="true" signature="563:611" ph="{...}" />
+                <marker date="1467614671000" expanded="true" signature="606:724" ph="{&quot;readOnly&quot;: true...}" />
+                <marker date="1467614671000" expanded="true" signature="650:698" ph="{...}" />
+                <marker date="1467614671000" expanded="true" signature="774:885" ph="{&quot;readOnly&quot;: true...}" />
+                <marker date="1467614671000" expanded="true" signature="837:881" ph="{...}" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="hotels_controller.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/hotels_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" column="7" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -58,7 +69,6 @@
       <list>
         <option value="$PROJECT_DIR$/app/views/hotels/new.html.haml" />
         <option value="$PROJECT_DIR$/app/views/hotels/edit.html.haml" />
-        <option value="$PROJECT_DIR$/app/controllers/hotels_controller.rb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/hotels.scss" />
         <option value="$PROJECT_DIR$/app/uploaders/image_uploader_uploader.rb" />
@@ -81,6 +91,7 @@
         <option value="$PROJECT_DIR$/db/migrate/20160703225624_create_reviews.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20160701194023_create_hotels.rb" />
         <option value="$PROJECT_DIR$/app/views/hotels/_form.html.haml" />
+        <option value="$PROJECT_DIR$/app/controllers/hotels_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/hotels/show.html.haml" />
       </list>
     </option>
@@ -229,6 +240,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HotelAdvisor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HotelAdvisor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -511,12 +540,12 @@
       <workItem from="1467399077632" duration="8226000" />
       <workItem from="1467408131347" duration="21000" />
       <workItem from="1467586184584" duration="1282000" />
-      <workItem from="1467613224152" duration="1106000" />
+      <workItem from="1467613224152" duration="1414000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10635000" />
+    <option name="totallyTimeSpent" value="10943000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="733" extended-state="6" />
@@ -528,7 +557,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3284553" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3300813" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3300813" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -642,13 +671,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/hotels_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -891,13 +913,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/hotels_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="7" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/hotels/show.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+        <state relative-caret-position="180">
+          <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
           <folding>
-            <marker date="1467614386000" expanded="true" signature="519:637" ph="{&quot;readOnly&quot;: true...}" />
-            <marker date="1467614386000" expanded="true" signature="563:611" ph="{...}" />
+            <marker date="1467614671000" expanded="true" signature="606:724" ph="{&quot;readOnly&quot;: true...}" />
+            <marker date="1467614671000" expanded="true" signature="650:698" ph="{...}" />
+            <marker date="1467614671000" expanded="true" signature="774:885" ph="{&quot;readOnly&quot;: true...}" />
+            <marker date="1467614671000" expanded="true" signature="837:881" ph="{...}" />
           </folding>
         </state>
       </provider>

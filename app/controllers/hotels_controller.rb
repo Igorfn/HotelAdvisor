@@ -1,16 +1,23 @@
 class HotelsController < ApplicationController
   before_action :find_hotel, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:new, :edit]
 
   def index
     @hotels = Hotel.all.order('created_at DESC')
   end
 
   def new
-    @hotel = Hotel.new
+    @hotel = current_user.hotels.build
   end
 
   def show
+    if @hotel.reviews.blank?
+      @average_review = 0
+    else
+      @average_review = @hotel.reviews.average(:rating).round(2)
+    end
   end
+
   def create
     @hotel = Hotel.new(hotel_params)
 
