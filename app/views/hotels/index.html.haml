@@ -6,7 +6,8 @@
   %p Price: #{hotel.price_of_room}  $
   = image_tag hotel.image.url.to_s, width: '350'
 
-
-
 %p= link_to 'Add Hotel', new_hotel_path
+
+= paginate @hotels
+
 

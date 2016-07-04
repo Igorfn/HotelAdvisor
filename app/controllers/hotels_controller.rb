@@ -3,7 +3,7 @@ class HotelsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :edit]
 
   def index
-    @hotels = Hotel.all.order('created_at DESC')
+    @hotels = Hotel.page(params[:page]).per(1)
   end
 
   def new
