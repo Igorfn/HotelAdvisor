@@ -6,5 +6,4 @@ class Hotel < ActiveRecord::Base
   validates :room_description,  presence: true, length: {minimum: 5, maximum: 1000};
   validates :price_of_room, presence: true, numericality: {greater_than: 0}
   validates :title, presence: true, length: {minimum: 3, maximum: 100}
-  validates :address, presence: true, length: {minimum: 3, maximum: 100}
 end

@@ -15,3 +15,14 @@
 = render @hotel.reviews
 %p= link_to 'Add review', new_hotel_review_path(@hotel)
 %p= link_to 'Back', root_path
+
+
+
+:javascript
+  $('.review-rating').raty({
+    readOnly: true,
+    score: function() {
+      return $(this).attr('data-score');
+    },
+    path: '/assets/'
+  });
