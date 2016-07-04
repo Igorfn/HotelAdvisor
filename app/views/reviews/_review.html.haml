@@ -1,6 +1,0 @@
-.container-hotel.review-rating{'data-score' => review.rating}
-%p= review.comment
-- if user_signed_in?
-  - if review.user_id == current_user.id
-    = link_to 'Edit review', edit_hotel_review_path(review.hotel, review)
-    = link_to 'Delete review', hotel_review_path(review.hotel, review), method: :delete, data: {confirm: 'Are yo u sure?'}
