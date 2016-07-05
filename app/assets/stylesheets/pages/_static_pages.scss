@@ -20,9 +20,14 @@
   p{
     text-align: center;
    }
+   a {
+     letter-spacing: 1px;
+     display: block;
+     color: #333;
+     }
  }
 
- .profile-container, .help-container{
+ .profile-container{
    width: 100%;
    margin-top: 50px;
    text-align: center;
@@ -37,4 +42,20 @@
      display: block;
      color: #333;
      }
+ }
+ .help-container{
+   width:400px;
+   margin-top: 50px;
+   overflow:visible;
+   position:absolute;//Можно поменять
+   left:50%; //Выравнивание
+   margin-left:-200px;//Выравнивание
+   text-align: center;
+  h1,p{
+    text-align: center;
+  }
+
+   details summary{
+    cursor: pointer;
+   }
  }
