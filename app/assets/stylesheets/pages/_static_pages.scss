@@ -1,3 +1,61 @@
 // Place all the styles related to the static_pages controller here.
 // They will automatically be included in application.css.sass.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+ .about-container{
+  width: 100%;
+  text-align: center;
+  h1{
+    margin-top: 50px;
+    text-align: center;
+  }
+  p{
+    text-align: center;
+    padding-top: 50px;
+   }
+ }
+ .contact-container{
+  width: 100%;
+  margin-top: 50px;
+  text-align: center;
+  p{
+    text-align: center;
+   }
+   a {
+     letter-spacing: 1px;
+     display: block;
+     color: #333;
+     }
+ }
+
+ .profile-container{
+   width: 100%;
+   margin-top: 50px;
+   text-align: center;
+    list-style: none;
+   p{
+     text-align: center;
+    }
+   a {
+     float: center;
+     letter-spacing: 1px;
+     padding: 12px 20px;
+     display: block;
+     color: #333;
+     }
+ }
+ .help-container{
+   width:400px;
+   margin-top: 50px;
+   overflow:visible;
+   position:absolute;//Можно поменять
+   left:50%; //Выравнивание
+   margin-left:-200px;//Выравнивание
+   text-align: center;
+  h1,p{
+    text-align: center;
+  }
+
+   details summary{
+    cursor: pointer;
+   }
+ }
