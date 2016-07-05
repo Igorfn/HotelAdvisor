@@ -1,0 +1,17 @@
+.btn-blue{
+  height: 48px;
+  background-color: #25BCCA;
+  border-radius: 3px;
+  a {
+    text-align: center;
+    letter-spacing: 1px;
+    padding: 12px 20px;
+    display: block;
+    color: #fff;
+    text-decoration: none;
+  }
+
+}
+.btn-blue:hover {
+    background-color: #1C2E36;
+}

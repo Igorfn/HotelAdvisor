@@ -38,6 +38,7 @@
                 %img{:alt => "", :src => hotel.image_url.to_s, :style => 'height: 300px'}
               %h2 #{hotel.title}
               %p.text-justify #{hotel.room_description}
-              %a.btn{:href => hotel_path(hotel)} Подробнее
+              .btn-blue
+                %a{:href => hotel_path(hotel)} Подробнее
 %center
   = paginate @hotels
