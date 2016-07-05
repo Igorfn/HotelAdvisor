@@ -11,7 +11,6 @@
   p{
     text-align: center;
     padding-top: 50px;
-    align-content: center;
    }
  }
  .contact-container{
@@ -20,7 +19,22 @@
   text-align: center;
   p{
     text-align: center;
-
-    align-content: center;
    }
+ }
+
+ .profile-container{
+   width: 100%;
+   margin-top: 50px;
+   text-align: center;
+    list-style: none;
+   p{
+     text-align: center;
+    }
+   a {
+     float: center;
+     letter-spacing: 1px;
+     padding: 12px 20px;
+     display: block;
+     color: #333;
+     }
  }
