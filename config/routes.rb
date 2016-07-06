@@ -2,6 +2,7 @@ HotelAdvisor::Application.routes.draw do
   namespace :api do
     namespace :v1, defaults: {format: 'json'} do
       resources :hotels
+      resources :users
     end
   end
 
