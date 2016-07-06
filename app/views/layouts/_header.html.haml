@@ -1,25 +1,26 @@
 %body
   .main-navigation
-    %ul.main-navigation
-      - if user_signed_in?
+    .pull-right
+      %ul
+        - if user_signed_in?
+          %li
+            = link_to 'Sing Out', destroy_user_session_path, method: :delete
+        - else
+          %li
+            = link_to 'Log In', new_user_session_path
+        - if user_signed_in?
+          %li
+            = link_to 'Profile', current_user
+          %li
+            = link_to 'Add Hotel', new_hotel_path
+        - else
+          %li
+            = link_to 'Sing Up', new_user_registration_path
         %li
-          = link_to 'Sing Out', destroy_user_session_path, method: :delete
-      - else
+          = link_to 'About Us', about_path
         %li
-          = link_to 'Log In', new_user_session_path
-      - if user_signed_in?
+          = link_to 'Contact Us', contact_path
         %li
-          = link_to 'Profile', current_user
+          = link_to 'Help', help_path
         %li
-          = link_to 'Add Hotel', new_hotel_path
-      - else
-        %li
-          = link_to 'Sing Up', new_user_registration_path
-      %li
-        = link_to 'About Us'
-      %li
-        = link_to 'Contact Us'
-      %li
-        = link_to 'Help'
-      %li
-        = link_to 'Home', root_path
+          = link_to 'Home', root_path

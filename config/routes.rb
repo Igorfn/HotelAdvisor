@@ -7,9 +7,9 @@ Rails.application.routes.draw do
     resources :reviews
   end
 
-  get "static_pages/help", as: "help"
-  get "static_pages/about", as: "about"
-  get "static_pages/contact", as: "contact"
+  get '/help' => 'static_pages#help'
+  get '/about' => 'static_pages#about'
+  get '/contact' => 'static_pages#contact'
   root 'hotels#index'
 
 end
