@@ -3,7 +3,8 @@ class HotelsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :edit]
 
   def index
-    @hotels = Hotel.page(params[:page]).per(1)
+    @hotels = Hotel.page(params[:page]).per(3)
+    # @top_hotels = Hotel.all.where('rating > ?', 2).limit(5)
   end
 
   def new

@@ -20,6 +20,8 @@ gem 'carrierwave'
 gem 'mini_magick'
 
 group :development, :test do
+  gem 'pry'
+  gem 'pry-rails'
   gem 'sqlite3', '~> 1.3', '>= 1.3.11'
   gem 'byebug',  '9.0.0', platform: :mri
 end

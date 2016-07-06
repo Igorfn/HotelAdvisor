@@ -1,6 +1,9 @@
 .profile-container
   %h1 Profile
-  = image_tag current_user.image_url.to_s, width: '250'
+  -if @user.image.url == nil
+    = image_tag 'slide2.png'
+  -else
+    = image_tag current_user.image_url.to_s
   %h3 Name:
   %p #{@user.username}
   %h3 e-mail:
