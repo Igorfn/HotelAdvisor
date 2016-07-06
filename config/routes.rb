@@ -1,7 +1,10 @@
 HotelAdvisor::Application.routes.draw do
   namespace :api do
     namespace :v1, defaults: {format: 'json'} do
-      resources :hotels
+      resources :hotels do
+        resources :reviews
+      end
+      resources :reviews
       resources :users
     end
   end
