@@ -4,10 +4,7 @@ class HotelsController < ApplicationController
 
   def index
     @hotels = Hotel.page(params[:page]).per(3)
-<<<<<<< HEAD
     # @top_hotels = Hotel.all.where('rating > ?', 2).limit(5)
-=======
->>>>>>> 933495d07ed129b1a24e2c61b60cbc761f6598d1
   end
 
   def new
