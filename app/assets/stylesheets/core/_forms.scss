@@ -1,0 +1,139 @@
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  padding-bottom: 6rem;
+  min-height: 100%;
+}
+
+.roompriceform{
+  padding-top: 10px;
+  padding-right: 8px;
+}
+.stateform{
+  padding-top: 10px;
+  padding-left: 32px;
+}
+.countryform{
+  padding-top: 10px;
+  padding-left: 14px;
+}
+.cityform{
+  padding-top: 10px;
+  padding-left: 40px;
+}
+.streetform{
+  padding-top: 10px;
+  padding-left: 27px;
+}
+.hdesform{
+  padding-top: 10px;
+  padding-right: 47px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.addhotelform{
+  max-width: 600px;
+  margin-top: 50px;
+  overflow:visible;
+  position:relative;//Можно поменять
+  left:50%; //Выравнивание
+  margin-left:-300px;//Выравнивание
+  text-align: center;
+  background-color: #f2f2f2;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+
+.form-inputs{
+ h1,p{
+   text-align: center;
+}
+}
+
+.form-actions {
+  text-align: center;
+}
+
+.e-mailform{
+    padding-top: 20px;
+padding-left: 45px !important;
+}
+.loginform{
+  .box-with-shadow{
+    max-width: 600px;
+    margin-top: 50px;
+    overflow:visible;
+    position:relative;//Можно поменять
+    left:50%; //Выравнивание
+    margin-left:-300px;//Выравнивание
+    text-align: center;
+    background-color: #f2f2f2;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  h2{
+    text-align: center;
+    padding-top: 50px;
+      }
+    .e-mailformlogin{
+        padding-top: 20px;
+    padding-left: 26px !important;
+
+  }
+}
+.password-form{
+    padding-top: 20px;
+    padding-left: 154px !important;
+    }
+  .usernamefield{
+      padding-top: 20px;
+    }
+  .passwordconfirm-form{
+      padding-top: 20px;
+    padding-right: 95px !important;
+   }
+
+.imageaddform{
+  padding-top: 20px;
+}
+.buttonform{
+  padding-top: 20px;
+      padding-left : 50px !important;
+}
+.regform{
+  .box-with-shadow{
+    max-width: 600px;
+    margin-top: 50px;
+    overflow:visible;
+    position:relative;//Можно поменять
+    left:50%; //Выравнивание
+    margin-left:-300px;//Выравнивание
+    text-align: center;
+    background-color: #f2f2f2;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  h2{
+    text-align: center;
+    padding-top: 50px;
+
+  }
+}

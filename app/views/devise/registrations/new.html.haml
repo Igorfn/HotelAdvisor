@@ -1,12 +1,19 @@
-%h2 Sign up
-= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), :html => {:multipart => true}) do |f|
-  = f.error_notification
-  .form-inputs
-    = f.input :image,           as: :file,    label: 'Hotel Image'
-    = f.hidden_field :image_cache
-    = f.input :username, required: true, autofocus: true
-    = f.input :email, required: true
-    = f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length)
-    = f.input :password_confirmation, required: true
-  .form-actions
-    = f.button :submit, "Sign up"
+.regform
+  %h2 Sign up
+  .box-with-shadow.col-md-12
+    = simple_form_for(resource, as: resource_name, url: registration_path(resource_name), :html => {:multipart => true}) do |f|
+      = f.error_notification
+      .form-inputs
+        .row.col-md-12.usernamefield
+          = f.input :username, required: true, autofocus: true
+        .row.col-md-12.e-mailform
+          = f.input :email, required: true
+        .row.col-md-12.password-form
+          = f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length)
+        .row.col-md-12.passwordconfirm-form
+          = f.input :password_confirmation, required: true
+        .row.col-md-12.imageaddform
+          = f.input :image,           as: :file,    label: 'Profile Image'
+          = f.hidden_field :image_cache
+        .row.col-md-12.buttonform
+          = f.button :submit, "Sign up"

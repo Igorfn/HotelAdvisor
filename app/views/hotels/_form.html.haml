@@ -1,12 +1,19 @@
-.container
+.addhotelform
   = simple_form_for @hotel, :html => {:multipart => true} do |f|
-    = f.input :title,                         label: 'Hotel Title'
+    .Hoteltitleform
+      = f.input :title,                         label: 'Hotel Title'
     = f.input :image,           as: :file,    label: 'Hotel Image'
-    = f.input :price_of_room,                 label: 'Room Price'
-    = f.input :state,                         label: 'State'
-    = f.input :count_name,                    label: 'Country'
-    = f.input :city,                          label: 'City'
-    = f.input :street,                        label: 'Street'
+    .roompriceform
+      = f.input :price_of_room,                 label: 'Room Price'
+    .stateform
+      = f.input :state,                         label: 'State'
+    .countryform
+      = f.input :count_name,                    label: 'Country'
+    .cityform
+      = f.input :city,                          label: 'City'
+    .streetform
+      = f.input :street,                        label: 'Street'
     = f.input :breakfast,       as: :boolean, label: 'Include breakfast'
-    = f.input :room_description,              label: 'Hotel Description'
+    .hdesform
+      = f.input :room_description,              label: 'Hotel Description'
     = f.button :submit
