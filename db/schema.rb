@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160704151442) do
+ActiveRecord::Schema.define(version: 20160706073722) do
 
   create_table "hotels", force: :cascade do |t|
     t.string   "title"
@@ -53,8 +53,10 @@ ActiveRecord::Schema.define(version: 20160704151442) do
     t.datetime "updated_at",                          null: false
     t.string   "image"
     t.string   "username"
+    t.string   "auth_token",             default: ""
   end
 
+  add_index "users", ["auth_token"], name: "index_users_on_auth_token", unique: true
   add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   add_index "users", ["username"], name: "index_users_on_username", unique: true

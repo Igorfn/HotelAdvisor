@@ -3,7 +3,8 @@ class Api::V1::HotelsController < ApplicationController
   respond_to :json
 
   def index
-    respond_with Hotel.all
+    hotels = Hotel.search(hotel_params)
+    render json: hotels
   end
 
   def new
@@ -24,7 +25,7 @@ class Api::V1::HotelsController < ApplicationController
   end
 
   def create
-    hotel = Hotel.new(hotel_params)
+    hotel = Hotel.create(hotel_params)
     if hotel.save
       render json: hotel, status: 201, location: [:api, hotel]
     else
@@ -33,7 +34,7 @@ class Api::V1::HotelsController < ApplicationController
   end
 
   def update
-    hotel = Hotel.find(params[:id])
+    hotel = hotels.build(hotel_params)
 
     if hotel.update(hotel_params)
       render json: hotel, status: 200, location: [:api, hotel]
