@@ -9,11 +9,12 @@
   z-index: 1030;
   padding: 0;
   margin: 0;
-  background-color: #1C2E36;
+  background-color: #428bca;
   .pull-right {
     right: 0;
     left: auto;
     li {
+      list-style: none;
       float: right;
       a {
         letter-spacing: 1px;

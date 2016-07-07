@@ -2,12 +2,11 @@
   %h1 Top Hotels
   - Hotel.top_hotels.each do |hotel|
     .row.col-md-2
-      .hotelitem
-        %img{:alt => "", :src => hotel.image_url.to_s, :style => 'height: 300px'}
-        %h1 Name
+      .hotellistitem
+        .thumbnail
+          %img{:alt => "", :src => hotel.image_url.to_s, :style => 'height: 300px'}
+        %h1 #{hotel.title}
         .average-review-rating{'data-score' => hotel.rating}
-        %p #{hotel.title}
-        %p Description
         %p #{hotel.room_description}
 .hotelslist
   %h1{:align => 'center'} Hotels
@@ -25,7 +24,7 @@
               .average-review-rating{'data-score' => hotel.rating}
               %p.text-justify #{hotel.room_description}
               .btn-blue
-                %a{:href => hotel_path(hotel)} Подробнее
+                %a{:href => hotel_path(hotel)} Details
 %center
   = paginate @hotels
 :javascript
