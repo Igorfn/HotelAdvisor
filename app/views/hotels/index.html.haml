@@ -1,29 +1,14 @@
 .container
-  .row.col-md-2
-    .hotelitem
-      %img{:alt => "", :src => "h.jpg"}
+  %h1 Top Hotels
+  - Hotel.top_hotels.each do |hotel|
+    .row.col-md-2
+      .hotelitem
+        %img{:alt => "", :src => hotel.image_url.to_s, :style => 'height: 300px'}
         %h1 Name
+        .average-review-rating{'data-score' => hotel.rating}
+        %p #{hotel.title}
         %p Description
-  .row.col-md-2
-    .hotelitem
-      %img{:alt => "", :src => "h.jpg"}
-        %h1 Name
-        %p Description
-  .row.col-md-4
-    .hotelitem
-      %img{:alt => "", :src => "h.jpg"}
-        %h1 Name
-        %p Description
-  .row.col-md-2
-    .hotelitem
-      %img{:alt => "", :src => "h.jpg"}
-        %h1 Name
-        %p Description
-  .row.col-md-2
-    .hotelitem
-      %img{:alt => "", :src => "h.jpg"}
-        %h1 Name
-        %p Description
+        %p #{hotel.room_description}
 .hotelslist
   %h1{:align => 'center'} Hotels
   .container
@@ -37,8 +22,25 @@
               .thumbnail
                 %img{:alt => "", :src => hotel.image_url.to_s, :style => 'height: 300px'}
               %h2 #{hotel.title}
+              .average-review-rating{'data-score' => hotel.rating}
               %p.text-justify #{hotel.room_description}
               .btn-blue
                 %a{:href => hotel_path(hotel)} Подробнее
 %center
   = paginate @hotels
+:javascript
+  $('.review-rating').raty({
+    readOnly: true,
+    score: function() {
+      return $(this).attr('data-score');
+    },
+    path: '/assets/'
+  });
+:javascript
+  $('.average-review-rating').raty({
+  	readOnly: true,
+  	path: '/assets/',
+  	score: function() {
+  		return $(this).attr('data-score')
+  	}
+  });
