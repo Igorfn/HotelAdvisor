@@ -1,8 +1,7 @@
 class User < ActiveRecord::Base
-  validates :auth_token, uniqueness: true
-
   has_many :hotels
   has_many :reviews
+  validates :auth_token, uniqueness: true
   mount_uploader :image, ImageUploader
 
   # Include default devise modules. Others available are:
@@ -16,4 +15,5 @@ class User < ActiveRecord::Base
       self.auth_token = Devise.friendly_token
     end while self.class.exists?(auth_token: auth_token)
   end
+
 end
