@@ -1,31 +1,29 @@
 .container
   .row
-    .thumbnail
-      .hotel-title
-        %h1 #{@hotel.title}
-        .row
-          .average-review-rating{'data-score' => @average_review}
-        %p
-          %b #{@hotel.count_name}, #{@hotel.state}, #{@hotel.city}, #{@hotel.street}
+    .hotel-title
+      %h1 #{@hotel.title}
+      .row
+        .average-review-rating{'data-score' => @average_review}
+      %p
+        %b #{@hotel.count_name}, #{@hotel.state}, #{@hotel.city}, #{@hotel.street}
   .row
     .hotview
       .row
-        .thumbnail
-          = image_tag @hotel.image_url.to_s, width: '250'
+        = image_tag @hotel.image_url.to_s, width: '250'
         .marg.thumbnail
           .descript
             %h3 Описание:
             %p #{@hotel.room_description}
 
-    .row
-      %p Отзывы:
-      = render @hotel.reviews
-      - if user_signed_in?
-        - if @hotel.user_id == current_user.id || current_user.admin?
-          %p= link_to 'Add review', new_hotel_review_path(@hotel)
-          = link_to "Edit Hotel", edit_hotel_path(@hotel)
-          = link_to "Delete Hotel", hotel_path(@hotel), method: :delete, data: { confirm: "Are you sure?" }
-%p= link_to 'Back', root_path
+  .row
+    %p Отзывы:
+    = render @hotel.reviews
+    - if user_signed_in?
+      - if @hotel.user_id == current_user.id || current_user.admin?
+        %p= link_to 'Add review', new_hotel_review_path(@hotel)
+        = link_to "Edit Hotel", edit_hotel_path(@hotel)
+        = link_to "Delete Hotel", hotel_path(@hotel), method: :delete, data: { confirm: "Are you sure?" }
+        %p= link_to 'Back', root_path
 :javascript
   $('.review-rating').raty({
     readOnly: true,
